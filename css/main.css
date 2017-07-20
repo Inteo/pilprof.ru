@@ -993,6 +993,9 @@ input:focus {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.ficon-calc:before {
+  content: "\e906"; }
+
 .ficon-furniture:before {
   content: "\e904"; }
 
@@ -1223,6 +1226,11 @@ input:focus {
     bottom: 0;
     width: 100%;
     left: 0; }
+    .main-services_calc i {
+      font-size: 22px;
+      display: inline-block;
+      vertical-align: middle;
+      margin: -4px 30px 0 -10px; }
   .main-services_title {
     color: #fff;
     font: 20px/26px 'RobotoB', sans-serif;
@@ -1402,7 +1410,7 @@ input:focus {
         .equip_text p i:after {
           content: '';
           position: absolute;
-          bottom: 0;
+          bottom: -1px;
           left: 0;
           right: 0;
           border-bottom: 2px solid #1565c0; }
