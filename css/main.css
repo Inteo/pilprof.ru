@@ -993,6 +993,12 @@ input:focus {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.ficon-account2:before {
+  content: "\e907"; }
+
+.ficon-account:before {
+  content: "\e908"; }
+
 .ficon-calc:before {
   content: "\e906"; }
 
@@ -1702,6 +1708,11 @@ input:focus {
           line-height: 60px;
           padding-top: 0;
           padding-bottom: 0; } }
+      .consult_btn a i {
+        font-size: 22px;
+        margin: -4px 30px 0 10px;
+        display: inline-block;
+        vertical-align: middle; }
 
 .partners {
   background: #fff;
