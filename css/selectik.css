@@ -1,0 +1,178 @@
+/* Styles for custom selects */
+.done select {
+    height: 0;
+    width: 0;
+    line-height: 0;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    z-index: -10;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.select-list {
+    position: absolute;
+    left: 0;
+
+}
+
+.custom-select {
+    z-index: 1
+}
+
+.custom-select * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.open_list {
+    z-index: 10
+}
+
+.custom-select ul,
+.custom-select li {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+.custom-select ul {
+    width: 130px !important;
+}
+.custom-select,
+.custom-select ul {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.custom-select .custom-text {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.custom-select li {
+    cursor: pointer;
+    min-height: 25px;
+}
+
+.select-scroll {
+    position: absolute;
+    right: 17px;
+    top: 10px;
+    z-index: 2
+}
+
+.default-scroll ul {
+    overflow-y: scroll
+}
+
+.custom-scroll {
+    overflow: hidden
+}
+
+.scroll-drag {
+    display: block;
+    position: absolute;
+    left: 1px;
+    cursor: pointer
+}
+
+.disabled * {
+    cursor: default !important
+}
+
+/* Style for example*/
+.custom-select {
+    font-size: 14px;
+}
+
+.custom-select .custom-text,
+.custom-select.disabled span.custom-text:hover {
+    overflow: hidden;
+    margin-bottom: 0 !important;
+    color: rgba(33, 33, 33, .5);
+    white-space: nowrap;
+    position: relative;
+    width: 100% !important;
+}
+
+.custom-select .custom-text:after {
+    content: '';
+    position: absolute;
+    border-right: 2px solid #1566C2;
+    border-bottom: 2px solid #1566C2;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    width: 7px;
+    height: 7px;
+    right: 10px;
+    top: 0;
+    bottom: 3px;
+    margin: auto 0;
+}
+.custom-select .custom-text:before {
+    content: '';
+    right: 0;
+    width: 25px;
+    background: #fff;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.custom-select span.custom-text:hover,
+.active span.custom-text {
+
+}
+
+.select-list {
+    top: 38px !important;
+    line-height: 40px;
+    padding: 10px 0;
+    background-color: #fff;
+    border: 2px solid #eee;
+    border-top: 0;
+}
+
+.select-list.custom-scroll {
+}
+.select-list li {
+    padding: 0 10px;
+    white-space: nowrap;
+}
+.select-list .selected,
+.select-list li:hover {
+    color: #1566C2;
+    background: #f6f6f6;
+}
+
+.select-list li.disabled {
+    color: #CCCCCC;
+    cursor: default
+}
+
+.select-scroll {
+    background-color: #eee;
+    width: 2px;
+}
+
+.scroll-drag {
+    top: 0;
+    width: 2px;
+    background-color: #14609e;
+    left: 0;
+}
+
+.custom-select .hover {
+    color: #FFF
+}
+
+.custom-select.disabled {
+    opacity: 0.5 !important;
+}
