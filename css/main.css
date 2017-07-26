@@ -243,6 +243,39 @@ input[type=checkbox] {
   input[type=checkbox]:checked + label:after {
     opacity: 1; }
 
+input[type=radio] {
+  display: none; }
+  input[type=radio] + label {
+    font-weight: 300;
+    margin-left: 30px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top; }
+    input[type=radio] + label:before {
+      content: '';
+      position: absolute;
+      left: -30px;
+      top: 2px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: #eee; }
+    input[type=radio] + label:after {
+      content: '';
+      position: absolute;
+      left: -25px;
+      top: 7px;
+      opacity: 0;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #1565c0;
+      -webkit-transition: opacity .3s ease;
+      transition: opacity .3s ease; }
+  input[type=radio]:checked + label:after {
+    opacity: 1; }
+
 .form-group {
   margin-bottom: 10px; }
 
@@ -321,6 +354,12 @@ h3,
 .text-center {
   text-align: center; }
 
+.h4,
+h4 {
+  margin-bottom: 25px;
+  font: 20px/30px 'RobotoB', sans-serif;
+  color: #1565c0; }
+
 p {
   margin: 0 0 30px; }
 
@@ -344,6 +383,13 @@ ol {
 ol li {
   position: relative; }
 
+ol li:before {
+  content: counter(li) ".";
+  counter-increment: li;
+  font-family: 'RobotoB', sans-serif;
+  color: #1565c0;
+  margin-right: 15px; }
+
 dl {
   margin-top: 0;
   margin-bottom: 20px; }
@@ -365,6 +411,16 @@ abbr[title] {
 
 table {
   background-color: transparent; }
+  table tr {
+    border-bottom: 2px solid #f6f6f6; }
+    table tr th {
+      background: #f6f6f6;
+      font: 14px/16px 'RobotoB', sans-serif;
+      color: #1565c0;
+      padding: 25px 30px;
+      text-transform: uppercase; }
+    table tr td {
+      padding: 15px 30px; }
 
 caption {
   padding-top: 8px;
@@ -437,6 +493,13 @@ textarea {
   background: #fff;
   color: #1565c0; }
   .btn__white:hover {
+    background: #1976d2;
+    color: #fff; }
+
+.btn__grey {
+  background: #f6f6f6;
+  color: #1565c0; }
+  .btn__grey:hover {
     background: #1976d2;
     color: #fff; }
 
@@ -712,6 +775,82 @@ input:focus {
       line-height: 22px;
       display: inline-block;
       vertical-align: middle; }
+
+.captioned-img {
+  margin-bottom: 40px; }
+  .captioned-img img {
+    width: 100%;
+    margin-bottom: 10px; }
+    @media (min-width: 1100px) {
+      .captioned-img img {
+        margin-bottom: 0; } }
+  .captioned-img p {
+    font-style: italic; }
+    @media (min-width: 1100px) {
+      .captioned-img p {
+        padding-left: 10px; } }
+
+.bordered-text {
+  padding: 40px;
+  border: 2px solid #1565c0;
+  font: 25px/35px 'RobotoB', sans-serif;
+  text-align: center;
+  color: #1565c0;
+  margin-top: 41px;
+  position: relative; }
+  .bordered-text:before {
+    font-family: 'ficon' !important;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: -39px;
+    content: "\e901";
+    font-size: 41px; }
+
+.upload-file {
+  line-height: 60px;
+  white-space: nowrap; }
+  .upload-file a {
+    margin-right: 30px; }
+    .upload-file a i {
+      font-size: 22px;
+      margin: -4px 20px 0 0;
+      display: inline-block;
+      vertical-align: middle; }
+  .upload-file span {
+    display: inline-block;
+    vertical-align: middle; }
+    .upload-file span .ficon-file {
+      font-size: 22px;
+      color: #1565c0;
+      margin: -4px 15px 0 0;
+      display: inline-block;
+      vertical-align: middle; }
+    .upload-file span b {
+      margin-left: 15px;
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      cursor: pointer; }
+      .upload-file span b:before, .upload-file span b:after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 0;
+        bottom: 4px;
+        margin: auto 0;
+        height: 15px;
+        width: 2px;
+        border-left: 2px solid #1565c0; }
+      .upload-file span b:before {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
+      .upload-file span b:after {
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
 
 .container-fluid {
   padding-right: 30px;
@@ -1232,6 +1371,12 @@ input:focus {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.ficon-upload:before {
+  content: "\e90b"; }
+
+.ficon-file:before {
+  content: "\e90c"; }
 
 .ficon-cert:before {
   content: "\e90a"; }
