@@ -2802,3 +2802,12 @@ input:focus {
     display: inline-block;
     vertical-align: middle;
     margin-bottom: 30px; }
+
+.ficon-board {
+  background: url(../img/board.png) no-repeat; }
+
+.ficon-saw2 {
+  background: url(../img/saw2.png) no-repeat; }
+
+.ficon-board2 {
+  background: url(../img/board2.png) no-repeat; }
